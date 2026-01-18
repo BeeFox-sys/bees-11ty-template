@@ -1,0 +1,14 @@
+{% layout "body.liquid", title: "Art" %}
+{% block content %}
+<h1> Art </h1>
+<ul class="art-list">
+    {%- for post in collections.art reversed -%}
+    <li
+    ><a href="{{ post.url }}">
+        <span class="art-image"><img src="{{post.data.image}}" alt="{{post.data.alt}}"></span>
+        <span>{{post.data.title}}</span>
+    </a> 
+    </li>
+    {%- endfor -%}
+</ul>
+{% endblock %}

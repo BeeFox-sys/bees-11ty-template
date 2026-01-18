@@ -1,0 +1,123 @@
+body {
+    background-color: #eee;
+    color: #222
+}
+
+header {
+    background-color: #222;
+    min-height: 5ch;
+    color: #eee;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 1ch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    a {
+        color: #eee;
+        text-decoration: none;
+    }
+    a:hover {
+        color: white;
+        text-decoration: underline dashed;
+    }
+    a[aria-current="page"]{
+        /* filter: drop-shadow(0 0 8px white) drop-shadow(0 0 8px white); */
+        text-decoration: underline wavy;
+    }
+    h1 {
+        margin: 0;
+        /* flex-grow: 1; */
+    }
+    nav {
+        /* display: flex;
+        justify-content: end;
+        flex-grow: 1; */
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 1ch;
+            padding-inline: 1ch;
+        }
+        li {
+            list-style: none;
+        }
+    }
+    #nav-skip {
+        position: absolute;
+        left: 1ch;
+        inset-block: 0;
+        align-self: center;
+        background-color: #000;
+        padding: 0.5ch;
+    }
+    #nav-skip:not(:focus) {
+        top: -1000px;
+    }
+}
+
+#content {
+    max-width: 80ch;
+    padding-inline: 1ch;
+    margin-inline: auto;
+}
+
+article {
+    .title, .date {
+        text-align: center;
+    }
+}
+
+.post-list {
+    list-style-type: "📃";
+}
+
+.art-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1ch;
+    padding: 0;
+    li {
+        /* min-width: fit-content; */
+        width: 30%;
+        /* flex-grow: 1; */
+        background-color: #ddd;
+        display: block;
+        margin-inline: auto;
+        text-align: center;
+        padding: 1ch;
+        transition-duration: 0.2s;
+        .art-image {
+                flex-grow: 1;
+            }
+        &:hover{
+            background-color: #ccf;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+        }
+        img {
+            width: 100%;
+            display: block;
+            margin-inline: auto;
+        }
+    }
+}
+
+.post-preview {
+    color: #666
+}
+
+.art {
+    max-height: 80vh;
+    margin-inline: auto;
+    display: block;
+}

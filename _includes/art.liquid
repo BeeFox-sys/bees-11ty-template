@@ -1,0 +1,11 @@
+{% layout "body.liquid" %}
+
+{% block content %}
+    <article>
+        <img class="art" src="{{image}}" alt="{{alt}}">
+        <h1 class="title">{{title}}</h1>
+        <div class="date">{{date | date: "%Y-%m-%d"}}</div>
+        <hr>
+        {{content}}
+    </article>
+{% endblock %}

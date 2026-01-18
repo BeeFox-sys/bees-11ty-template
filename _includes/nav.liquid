@@ -1,0 +1,14 @@
+{% assign currentUrl = page.url %}
+
+<header>
+    <a href="#content" id="nav-skip">Skip Navigation</a>
+    <h1>{{config.site_title}}</h1>
+    <nav>
+        <ul>
+            <li><a {% if currentUrl == '/' %}aria-current="page"{% endif %} href="/">Home</a></li>
+            <li><a {% if currentUrl == '/art/' %}aria-current="page"{% endif %} href="/art/">Art</a></li>
+            <li><a {% if currentUrl == '/blog/' %}aria-current="page"{% endif %} href="/blog/">Blog</a></li>
+
+        </ul>
+    </nav>
+</header>
